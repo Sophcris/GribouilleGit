@@ -23,7 +23,11 @@ Voici le fonctionnement du jeu détaillé :
     * Tous les nombres sont décalés dans la direction voulue
     * Lors de se décalement, si 2 nombres identiques se retrouvent côte à côte, ils sont alors "fusionné" en un seul nombre qui prend la place du nombre le plus loin dans la direction de la grille.
     * Un nombre "fusionné" prend comme valeur **la somme des deux des nombres.**
-        * Attention, un chiffre "fusionné", ne peut pas se fusionner à nouveau dans le même déplacement !
-        * Exemple : si sur une ligne il y a : "2 rien 2 4", lors d'un déplacement à droite, la ligne deviendra : "rien rien 4 4"
-* Tant que la grille n'est pas remplit ou qu'elle permet encore des déplacement même remplit (ie il reste encore des chiffres à fusionner), il est possible de jouer
-* Si le joueur atteint le chiffre fusionné de 2048, il a alors gagné mais peut encore continuer pour battre son meilleur score (je connais des personne qui sont allé à 8192, je ne sais pas comment elles ont fait)
+    * Cette valeur s'ajoute alors au score de la partie. Ex: on fusionne deux nombres 4, ce qui donne un chiffre fusionné 8 et ajoute ainsi 8 au score.
+    * Attention, un chiffre "fusionné", ne peut pas se fusionner à nouveau dans le même déplacement !
+    * Exemple : si sur une ligne il y a : "2 rien 2 4", lors d'un déplacement à droite, la ligne deviendra : "rien rien 4 4"
+    * Après chaque déplacement, un nouveau chiffre apparait aléatoirement aux endroits vides de la grille selon les mêmes modalités que le chiffre de départ (90% de chance de 2 et 10% de 4).
+    * S'il n'y a plus de place pour que le nouveau chiffre apparaisse, alors la partie est perdue.
+* Tant que la grille n'est pas remplit ou qu'elle permet encore des déplacement même remplit (ie il reste encore des chiffres à fusionner), il est possible de jouer.
+* Si la grille et totalement remplit et qu'aucun déplacement n'est possible dans aucune direction, alors la partie est perdue.
+* Si le joueur atteint le chiffre fusionné de 2048, **il a alors gagné** mais peut encore continuer pour battre son meilleur score (je connais des personne qui sont allé à 8192, je ne sais pas comment elles ont fait)
