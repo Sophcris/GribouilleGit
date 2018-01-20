@@ -22,7 +22,8 @@ Voici le fonctionnement du jeu détaillé :
 * Il est possible de déplacer tous les nombres de la grille en utilisant les flèches du clavier (optionnellement Z, Q, S, D ou I, J, K, L) ou les mouvements de vos doigts sur un smartphone.
 * Lors du déplacement de la grille :
     * Tous les nombres sont décalés dans la direction voulue
-    * Lors de se décalement, si 2 nombres identiques se retrouvent côte à côte, ils sont alors "fusionné" en un seul nombre qui prend la place du nombre le plus loin dans la direction de la grille.
+    * Lors de ce décalement, si 2 nombres identiques se retrouvent côte à côte, ils sont alors "fusionné" en un seul nombre qui prend la place du nombre le plus loin dans la direction de la grille.
+    * Un nouveau nombre est généré aléatoire même si aucun nombre ne bouge après un décalement (ie ils étaient déjà tous décaler dans la direction)
     * Un nombre "fusionné" prend comme valeur **la somme des deux des nombres.**
     * Cette valeur s'ajoute alors au score de la partie. Ex: on fusionne deux nombres 4, ce qui donne un chiffre fusionné 8 et ajoute ainsi 8 au score.
     * Attention, un chiffre "fusionné", ne peut pas se fusionner à nouveau dans le même déplacement !
