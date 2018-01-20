@@ -52,3 +52,19 @@ Ce nombre doit aussi être choisi aléatoirement selon ce proportion : 90% de ch
 
 **Attention #1** : La position aléatoire doit être choisie parmi les cases vides de la grille. Un nouveau nombre doit en aucun cas en écraser un autre !
 **Attention #2** : Veillez à faire en sorte de savoir si la grille est pleine et donc ne pas rajouter de nombre dans ce cas.
+
+## Les consignes de maître Yoda
+
+### Git tu utiliseras
+
+### Sur Gitlab ton projet tu rendras
+
+### Formater ton code tu dois
+
+### Eslint ton code valide sera
+
+### Bryan is in the kitchen
+
+### Small is beautifull
+
+### Jamais tu ne copiera
