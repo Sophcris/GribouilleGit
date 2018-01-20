@@ -16,6 +16,7 @@ _Note : bien que le code source de ce projet soit libre et qu'il existe beaucoup
 2048 est un jeu assez simple mais suffisament compliqué pour que son développement vous prenne la tête quelques jours, voir plus :).
 
 Voici le fonctionnement du jeu détaillé :
+
 * Le jeu est contenu dans une grille de 4*4
 * La partie commence avec 2 nombres positionnés aléatoirement dans la grille. Ces nombres sont généralement des 2 (dans 90% des cas), mais il peut s'agir de 4 aussi (dans 10% des cas)
 * Il est possible de déplacer tous les nombres de la grille en utilisant les flèches du clavier (optionnellement Z, Q, S, D ou I, J, K, L) ou les mouvements de vos doigts sur un smartphone.
@@ -31,3 +32,22 @@ Voici le fonctionnement du jeu détaillé :
 * Tant que la grille n'est pas remplit ou qu'elle permet encore des déplacement même remplit (ie il reste encore des chiffres à fusionner), il est possible de jouer.
 * Si la grille et totalement remplit et qu'aucun déplacement n'est possible dans aucune direction, alors la partie est perdue.
 * Si le joueur atteint le chiffre fusionné de 2048, **il a alors gagné** mais peut encore continuer pour battre son meilleur score (je connais des personne qui sont allé à 8192, je ne sais pas comment elles ont fait)
+ 
+## Etapes de développement
+
+Pour vous aider dans la mise en place du projet, j'ai découpé le développement en plusieurs étapes. Vous n'êtes pas obligé de les suivre elles sont à titre indicatif :
+
+### Arriver à gérer l'affichage de la grille en Javascript
+
+Au tout départ, la grille est uniquement affiché en Html. La première chose à faire est donc de créer un fichier Javascript contenant une grille (que vous stockerez comme vous voudrez) dans laquelle vous pourrez mettre des nombres.
+
+Coder ensuite une fonction permettant de modifier la structure Html de la page et d'afficher les nombres présents dans votre grille.
+
+### Placement aléatoire des nombres
+
+Une fois que vous avez trouvé le moyen d'afficher les nombres de votre grille. Vous devrez créer une (ou plusieurs) fonction vous permettant de positionner aléatoirement un nombre dans la grille.
+
+Ce nombre doit aussi être choisi aléatoirement selon ce proportion : 90% de chance d'avoir un 2 et 10% de chance d'avoir un 4.
+
+**Attention #1** : La position aléatoire doit être choisie parmi les cases vides de la grille. Un nouveau nombre doit en aucun cas en écraser un autre !
+**Attention #2** : Veillez à faire en sorte de savoir si la grille est pleine et donc ne pas rajouter de nombre dans ce cas.
