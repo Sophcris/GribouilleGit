@@ -254,7 +254,7 @@ De plus, Github a instauré une sorte de "standard" qui profite à l'ensemble de
 
 C'est donc un site génial dont le seul défaut et de ne pas être basé sur un [logiciel libre](https://fr.wikipedia.org/wiki/Logiciel_libre).
 
-C'est pour cela que le projet [GitLab](https://about.gitlab.com/) a vu le jour et c'est pour cela qu'on utilisera pour notre projet une instance de Gitlab hébergée gracieusement par l'excellente association [framasoft](framasoft.org).
+C'est pour cela que le projet [GitLab](https://about.gitlab.com/) a vu le jour et c'est pour cela qu'on utilisera pour notre projet une instance de Gitlab hébergée gracieusement par l'excellente association [framasoft](https://framagit.org).
 
 ### Formater ton code tu dois
 
