@@ -254,13 +254,69 @@ De plus, Github a instauré une sorte de "standard" qui profite à l'ensemble de
 
 C'est donc un site génial dont le seul défaut et de ne pas être basé sur un [logiciel libre](https://fr.wikipedia.org/wiki/Logiciel_libre).
 
-C'est pour cela que le projet [GitLab](https://about.gitlab.com/) a vu le jour et c'est pour cela qu'on utilisera pour notre projet une instance de Gitlab hébergée gracieusement par l'excellente association [framasoft](https://framagit.org).
+C'est pour cela que le projet [GitLab](https://about.gitlab.com/) a vu le jour et c'est pour cela qu'on utilisera pour notre projet une instance de Gitlab hébergée gracieusement par l'excellente association [framasoft](https://framasoft.org).
+
+Pour cela faites les étapes suivantes :
+
+* Créez-vous un compte sur [framagit](www.framagit.org)
+* Ensuite "forker" ce projet en cliquant sur le lien "fork" sur la page d'accueil du projet
+* Cela va faire une copie du projet dans votre espace personnel
+* Vous n'avez plus qu'à cloner le projet sur votre disque dur avec l'adresse fournit par framagit :
+* Ex : `git clone git@framagit.org:<votre_nom>/2048-lafabrique.git`
+
+Puis pour rendre votre projet vous n'aurez qu'à faire un `git push` comme décrit plus haut.
 
 ### Formater ton code tu dois
 
+S'il y a bien quelque chose qui fait débat parmis les développeurs, c'est la forme que dois prendre notre code.
+
+Il faut dire qu'il est très embêttant de lire du code mal formaté (par exemple sans tabulation) et on peut être perturbé par lire du code qui ne suit pas les mêmes règles de formatage.
+
+Afin de clore le débat une bonne fois pour toute, certains langage géniaux comme [go](golang.org) ou encore [elm](http://elm-lang.org/) incluent un outil de formattage automatique du code que tout le monde applique.
+
+Il n'y a donc plus qu'une seule manière d'écrire du code, finit les débat interminables et assez stérils !
+
+[Un outil similaire](https://prettier.io/) à été mis au point pour Javascript et vous devrez l'utiliser pour ce projet (en tout cas votre code devra être formater de la même manière).
+
+Il s'agit de [prettier](https://prettier.io/).
+
+Je vous invite dès maintenant à l'installer globalement avec `npm`:
+
+`npm install -g prettier`
+
+Puis d'installer un plugin pour l'intégrer automatiquement à votre éditeur de texte préféré. Vous trouverez les listes des plugins existants dans la partie "Editor integration" de la page d'accueil du site.
+
+Pour s'assurez que tout fonctionne bien, créer un fichier Javascript, dans lequel vous mettez du code valide mais écrit n'importe comment, par exemple le code se trouvant [sur cette page à gauche](https://prettier.io/playground/), et votre code devrait être transformé en quelque chose de beaucoup plus lisible.
+
+Si ce n'est pas le cas, c'est qu'il y a un souci, cherchez pourquoi et demander de l'aide si le problème persiste.
+
 ### Eslint ton code valide sera
 
+Javascript étant un langage non typé et par défaut assez permissif, il est possible de faire beaucoup d'erreurs sans en être averti.
+
+C'est pratique quand on bidouille un petit site dans son coin car on a rapidement quelque chose même si on code avec les pieds, par contre, dès que l'on commence à travailler à plusieurs sur des applications web de plusieurs milliers de lignes, là ça devient compliqué !
+
+C'est pour ça qu'on rapidement émergé des outils appelés _linter_ qui font des vérifications de votre code et vous avertissent lorsqu'il y a un problème potentiel.
+
+[eslint](eslint.org) est le plus connu d'entre eux pour javascript et c'est celui que nous allons utiliser pour notre projet.
+
+Pour des raisons pratiques, on va aussi l'installer globalement :
+
+`npm install -g eslint`
+
+Eslint fonctionne avec un fichier de configuration : `.eslintrc.json` (ou .js, .yaml). Il précise le comportement du linter, quels sont les règles à utiliser etc.
+
+Un fichier de ce genre est déjà écrit pour le projet 2048, vous n'avez donc plus qu'à appeler eslint sur vos fichiers pour vérifier qu'ils sont bien conformes.
+
+`eslint <nom_du_fichier>`
+
+Vous pouvez aussi [intégrer `eslint` avec votre éditeur de texte préféré](https://eslint.org/docs/user-guide/integrations), c'est assez pratique :
+
+Tout code rendu devra généré aucune erreur et aucun warning eslint ! 
+
 ### Bryan is in the kitchen
+
+
 
 ### Small is beautifull
 
