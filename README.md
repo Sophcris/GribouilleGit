@@ -67,4 +67,6 @@ Ce nombre doit aussi être choisi aléatoirement selon ce proportion : 90% de ch
 
 ### Small is beautifull
 
-### Jamais tu ne copiera
+### Jamais tu ne copieras
+
+### Du javascript récent tu utiliseras
