@@ -50,7 +50,7 @@
         2. [Sauvegarde de la partie en cours](#sauvegarde-de-la-partie-en-cours)
         3. [Animation sur les déplacements](#animation-sur-les-deplacements)
         4. [Animation pour les nouvelles tuiles](#animation-pour-les-nouvelles-tuiles)
-        5. [Gestion des événements touch](#gestion-des-evenements-touch)
+        5. [Gestion des événements touch](#gestion-des-événements-touch)
 
 
 ## Introduction
