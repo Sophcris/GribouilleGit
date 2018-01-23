@@ -85,6 +85,7 @@ Voici le fonctionnement du jeu détaillé :
     * Attention, un chiffre "fusionné", ne peut pas se fusionner à nouveau dans le même déplacement !
     * Exemple : si sur une ligne il y a : "2 rien 2 4", lors d'un déplacement à droite, la ligne deviendra : "rien rien 4 4"
     * Après chaque déplacement, un nouveau chiffre apparait aléatoirement aux endroits vides de la grille selon les mêmes modalités que le chiffre de départ (90% de chance de 2 et 10% de 4).
+    * S'il n'y a eu aucun déplacement ou aucune fusion, alors le nouveau chiffre n'apparait pas.
     * S'il n'y a plus de place pour que le nouveau chiffre apparaisse, alors la partie est perdue.
 * Tant que la grille n'est pas remplit ou qu'elle permet encore des déplacement même remplit (ie il reste encore des chiffres à fusionner), il est possible de jouer.
 * Si la grille et totalement remplit et qu'aucun déplacement n'est possible dans aucune direction, alors la partie est perdue.
