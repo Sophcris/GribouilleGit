@@ -1,8 +1,9 @@
 # 2048-lafabrique
 
-{{TOC}}
+1. [Introduction](#introduction)
+2. [Fonctionnement du jeu](#fonctionnement_du_jeu)
 
-<a name="introduction">
+
 ## Introduction
 
 [2048](http://gabrielecirulli.github.io/2048/) est un jeu [libre](https://fr.wikipedia.org/wiki/Logiciel_libre) (dont le code source est hébergé sur [github](https://github.com/gabrielecirulli/2048))
