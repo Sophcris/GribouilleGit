@@ -2,6 +2,9 @@
 
 1. [Introduction](#introduction)
 2. [Fonctionnement du jeu](#fonctionnement-du-jeu)
+3. Etapes de développement
+    3.1 Arriver à gérer l'affichage de la grille en Javascript
+    3.2 Placement aléatoire des nombres
 
 
 ## Introduction
