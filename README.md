@@ -33,7 +33,7 @@ Voici le fonctionnement du jeu détaillé :
 * Tant que la grille n'est pas remplit ou qu'elle permet encore des déplacement même remplit (ie il reste encore des chiffres à fusionner), il est possible de jouer.
 * Si la grille et totalement remplit et qu'aucun déplacement n'est possible dans aucune direction, alors la partie est perdue.
 * Si le joueur atteint le chiffre fusionné de 2048, **il a alors gagné** mais peut encore continuer pour battre son meilleur score (je connais des personne qui sont allé à 8192, je ne sais pas comment elles ont fait)
- 
+
 ## Etapes de développement
 
 Pour vous aider dans la mise en place du projet, j'ai découpé le développement en plusieurs étapes. Vous n'êtes pas obligé de les suivre elles sont à titre indicatif :
@@ -53,6 +53,30 @@ Ce nombre doit aussi être choisi aléatoirement selon ce proportion : 90% de ch
 **Attention #1** : La position aléatoire doit être choisie parmi les cases vides de la grille. Un nouveau nombre doit en aucun cas en écraser un autre !
 
 **Attention #2** : Veillez à faire en sorte de savoir si la grille est pleine et donc ne pas rajouter de nombre dans ce cas.
+
+### Détecter les déplacements
+
+Avec les flèches au minimum
+
+### Déplacer les nombres dans une direction
+
+Juste déplacer tous les nombres dans la direction sans merger
+
+### Merger les nombres
+
+### Gérer toutes les directions
+
+### Gérer le game over
+
+### Gérer les scores
+
+### Affichage
+
+A tout moment vous pouvez aussi travailler l'aspect visuel de votre 2048. Pour cela, vous devrez utiliser des classes CSS que vous définirez dans un fichier CSS à part.
+
+Ces classes peuvent contenir des animations qui peuvent rendre le jeu plus fun.
+
+Vous êtes libre de choisir les couleurs que vous souhaitez et le thème qui vous plait alors amusez vous !
 
 ## Les commandements de maître Yoda
 
