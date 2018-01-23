@@ -448,3 +448,13 @@ autreVar = 14;
 ```
 
 ## Barème
+
+Comme annoncé plus haut, le barême prendra aussi bien en compte le fond (est-ce que votre jeu fonctionne) que la forme (est-ce que vous avez respéctez les différentes consignes, est-ce que le jeu est "beau" etc.).
+
+Voici une liste des points qui seront évalués lors de la soutenance.
+
+Si votre projet répond à tous les critères, vous aurez la note maximale.
+
+Pour éviter que vous ne fassiez qu'une "chasse aux points", je ne précise pas le nombre de points de chaque éléments, sachez juste que ça sera équitablement réparti en fonction de la difficulté de chaque tâche.
+
+
