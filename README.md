@@ -2,7 +2,8 @@
 
 {{TOC}}
 
-## Introduction [](){name="introduction"}
+<a name="introduction">
+## Introduction
 
 [2048](http://gabrielecirulli.github.io/2048/) est un jeu [libre](https://fr.wikipedia.org/wiki/Logiciel_libre) (dont le code source est hébergé sur [github](https://github.com/gabrielecirulli/2048))
 qui a tout de suite eu beaucoup de succès à sa sortie.
