@@ -457,4 +457,89 @@ Si votre projet répond à tous les critères, vous aurez la note maximale.
 
 Pour éviter que vous ne fassiez qu'une "chasse aux points", je ne précise pas le nombre de points de chaque éléments, sachez juste que ça sera équitablement réparti en fonction de la difficulté de chaque tâche.
 
+### Forme
+
+#### Rendu à temps
+
+La date buttoire de rendu du projet est le dimanche **1er avril (on pouvait pas rêver mieux!) à 22h22** petante !
+Non seulement, les commits effectués après ne seront pas pris en compte mais vous devrez avoir _pusher_ vos modification sur votre projet gitlab avant cette heure-ci.
+
+Et pas question de me dire qu'il y a eu un souci technique à 21h50, à vous de vous assurez que tout fonctionne bien avant. Rappelez-vous, vous pouvez faire plusieurs commits.
+
+Je récupérerai donc à cette heure là tous les projets sur gitlab en faisant un bête :
+`git pull origin master`
+
+#### Rendu dans les bonnes modalités
+
+Vous devez non seulement rendre à temps, mais sur un dépôt gitlab comme précisé plus haut. La branche utilisée doit être `master` (rien à faire normalement, c'est le fonctionnement pas défaut).
+
+Normalement ça doit être _easy_ :).
+
+#### Plusieurs commits avec messages explicites
+
+Un `git log` sur votre projet doit afficher au moins 10 commits avec des messages **en anglais** et explicites comme je l'ai expliqué plus haut.
+
+Si ce n'est pas le cas, vous n'aurez pas tous les points pour ce critère.
+
+#### Code écrit dans un anglais compréhensible
+
+Vos noms de variables et vos noms de fonctions devront être en anglais et ne pas être de grosses abréviations ou ne pas avoir de signification (ex : `let a = 0;`).
+
+A vous de vous assurez avant la date buttoire que vos noms sont bien choisis en faisant lire votre code par vos camarades par exemple.
+
+#### Fonctions pas trop grosses
+
+Comme précisé plus haut aussi, vos fonctions ne devront pas être trop importantes.
+
+#### Pas de duplication de code
+
+Quand on débute, on a souvent tendance à copier/coller son code un peu partout et ça devient vite n'importe quoi. Si je vois du code qui se ressemble trop, vous serez sanctionné.
+
+L'idée est de faire des fonctions génériques qui permettent de réutiliser plusieurs fois une même logique de code.
+
+#### Eslint OK
+
+Je dois pouvoir passer eslint avec le fichier `.eslintrc.json` sans aucune erreur, ni warning.
+
+#### Code formaté
+
+Votre code doit être formaté avec prettier ayant les réglages par défaut.
+
+#### Module ES6
+
+Tout votre code javascript doit se trouver dans des modules ES6. Il est interdit d'écrire du code js dans une balise `<script></script>` de votre html.
+
+### Fond
+
+#### Position aléatoire des 2 premiers nombres
+
+#### Déplacement des tuiles avec les touches au moins dans une direction
+
+#### Fusion des nombres fonctionnelle au moins dans une direction
+
+#### Apparition d'une nouvelle tuile après un déplacement
+
+#### Gestion du game over
+
+#### Message quand on a gagné
+
+#### Déplacement fonctionnel dans toutes les directions
+
+#### Fusion des nombres fonctionnelle dans toutes les directions
+
+#### Jeu "joli" et original
+
+#### Utilisation des bonnes classes CSS
+
+#### Bonus
+
+##### Sauvegarde des meilleurs scores
+
+##### Sauvegarde de la partie en cours
+
+##### Animation sur les déplacements
+
+##### Animation pour les nouvelles tuiles
+
+##### Gestion des événements touch
 
