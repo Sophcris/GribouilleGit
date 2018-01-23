@@ -13,7 +13,7 @@ Il a été codé avec des technologies web et est donc compatible avec toutes le
 
 Dans le cadre du cours de Javascript pour la fabrique du numérique, vous allez avoir à recoder entièrement ce jeu en partant de 0 (ou plutôt de 2 eheh).
 
-Ce document décrit avec précision le fonctionnement du jeu, les différentes étapes du développement, les modalités de rendu ainsi que le barême qui sera appliqué pour la notation finale.
+Ce document décrit avec précision le fonctionnement du jeu, les différentes étapes du développement, les modalités de rendu (ou "commandements de Yoda") ainsi que le barême qui sera appliqué pour la notation finale.
 
 _Note : bien que le code source de ce projet soit libre et qu'il existe beaucoup d'autres clones disponible, n'essayez pas de le recopier. Je saurai voir en un clin d'oeil si ce code ne vient pas de vous !_
 
