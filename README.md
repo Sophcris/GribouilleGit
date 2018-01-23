@@ -1,7 +1,7 @@
 # 2048-lafabrique
 
 1. [Introduction](#introduction)
-2. [Fonctionnement du jeu](#fonctionnement_du_jeu)
+2. [Fonctionnement du jeu](#fonctionnement-du-jeu)
 
 
 ## Introduction
