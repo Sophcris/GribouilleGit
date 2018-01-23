@@ -316,10 +316,48 @@ Tout code rendu devra généré aucune erreur et aucun warning eslint !
 
 ### Bryan is in the kitchen
 
+L'anglais est **LA** langue à utiliser quand on programme. C'est peut-être embêttant mais c'est comme ça. Cela permet à n'importe qui de lire votre code et de le comprendre.
 
+Vous devrez donc nommer vos variables et vos fonctions en anglais.
+
+Seule exception à la règles : si votre application traite de choses spécifique à une région ou une langue et qu'il n'y a pas de traduction valable.
+
+Pour m'aider dans le choix des mots, j'utilise très régulièrement l'excellent [WordReference](http://www.wordreference.com/) qui donne plusieurs traductions en fonction du contexte, ce qui est bien plus utile qu'un simple google translate.
 
 ### Small is beautifull
 
+Derrière cette phrase se cache un élément essentiel en programmation : **ne faites pas des fonctions ou des fichiers trop gros.**
+
+Généralement, si une fonction est trop longue, c'est qu'elle fait plusieurs choses et que normalement, une fonction ne devrait faire qu'une et une seule chose.
+
+C'est difficile au début de comprendre cette règle et de l'appliquer, mais vous serez aussi noté là dessus, alors attention !
+
 ### Jamais tu ne copieras
 
+Vous êtes là pour apprendre, pas pour avoir à tout prix une bonne note. Ce qui compte dans ce projet, ce n'est pas de le finir (ça serait super si vous y arrivez) mais surtout le processus de recherche et d'apprentissage que vous avez mis en oeuvre.
+
+Il sera très évident pour moi de voir si vous avez pris du code sur internet ou sur vos camarades. Surtout que vous ne serez certainement pas en mesure de l'expliquer.
+
+Si jamais une triche devait être découverte, vous serez sanctionné par une mauvaise note et l'équipe pédagogique sera avertie.
+
+Cela ne veut pas dire que vous ne pouvez pas discuter entre vous, ou vous inspirer de choses que d'autres ont fait, c'est le principe d'internet et des logiciels libres, juste que vous devez comprendre tout ce que vous écrivez.
+
 ### Du javascript récent tu utiliseras
+
+Nous n'avons pas le temps de voir toute l'histoire de javascript, mais c'est un langage qui a beaucoup évolué ces dernières années.
+
+De nouveaux mots clés sont arrivés et de nouvelles manières de faire beaucoup plus propres. Vous devrez donc n'utiliser que les dernières fonctionnalités du langage.
+
+Pour cela, Eslint a été configurer pour vous guider et levera des _warnings_ quand vous n'utilisez pas une fonctionnalité ES6 (ou ECMAScript2015, nom de la dernière version majeur de Javascript).
+
+Ex. en ancien javascript (comme en ancien français sauf que c'était il y a juste quelques années :) on écrivait pour déclarer une variable :
+```js
+var maVar = 10;
+```
+
+En javascript ES6, il faut maintenant utiliser le mot clé `let` ou `const` :
+```js
+const maVar = 10; // Si on ne veut pas réaffecter la variable
+let autreVar = 12; // Si on veut réaffecter la variable
+autreVar = 14;
+```
