@@ -54,22 +54,6 @@ Ce nombre doit aussi être choisi aléatoirement selon ce proportion : 90% de ch
 
 **Attention #2** : Veillez à faire en sorte de savoir si la grille est pleine et donc ne pas rajouter de nombre dans ce cas.
 
-### Détecter les déplacements
-
-Avec les flèches au minimum
-
-### Déplacer les nombres dans une direction
-
-Juste déplacer tous les nombres dans la direction sans merger
-
-### Merger les nombres
-
-### Gérer toutes les directions
-
-### Gérer le game over
-
-### Gérer les scores
-
 ### Affichage
 
 A tout moment vous pouvez aussi travailler l'aspect visuel de votre 2048. Pour cela, vous devrez utiliser des classes CSS que vous définirez dans un fichier CSS à part.
@@ -77,6 +61,76 @@ A tout moment vous pouvez aussi travailler l'aspect visuel de votre 2048. Pour c
 Ces classes peuvent contenir des animations qui peuvent rendre le jeu plus fun.
 
 Vous êtes libre de choisir les couleurs que vous souhaitez et le thème qui vous plait alors amusez vous !
+
+### Bouton "Nouvelle partie"
+
+Rapidement, vous allez avoir besoin de relancer une partie pour faire des tests.
+
+Créez alors un bouton nouvelle partie qui va tout réinitialiser : la grille, les score etc.
+
+### Détecter les déplacements
+
+Afin de pouvoir jouer à votre jeu, vous allez devoir "écouter" les événements clavier (mais pas que) pour savoir si l'utilisateur à appuyé sur une touche et laquelle.
+
+La syntaxe à utiliser est la suivante :
+
+```js
+window.onkeydown = function (event) {
+  // Gérer l'événement ici
+}
+```
+
+Voici la [liste des propriétés](https://developer.mozilla.org/en-US/docs/Web/Events/keydown) de l'événement `keydown`.
+
+Tâchez par exemple de détecter les flèches "haut", "bas", "gauche", "droite" afin de pouvoir en faire quelque chose après.
+
+### Déplacer les nombres dans une direction
+
+Une fois que vous avez la direction choisie par l'utilisateur suite à l'appuis de touche, la prochaine étape consiste à déplacer les nombres dans cette direction, sans les fusionner.
+
+Ex : Si vous avez une ligne avec `2 rien 2 4` et qu'il y a un déplacement à gauche, la ligne deviendra alors `2 2 4 rien`
+
+Peut-être commencez par le faire pour une seule direction dans un premier temps, puis gérer les autres direction après.
+
+Si vous utilisez un `Array` contenant des `Array` représentants les lignes de votre tableau, c'est souvent plus simple de commencer par les déplacement horizontaux ("gauche" et "droite"), plutôt que "haut" et "bas".
+
+Mais tout dépend comment vous avez coder votre 2048...
+
+### Fusionner les nombres
+
+Maintenant que vos nombre vont bien tous dans la même direction, il faut _fusionner_ les nombres égaux.
+
+Attention à ne le faire qu'une seule fois (voir Fonctionnement du jeu) !
+
+C'est une étape pas évidente et c'est peut-être celle qui vous prendra le plus de temps.
+
+A vous de trouver _votre_ méthode, même si ce n'est pas la plus compréhensive, pratique ou élégante, ce qui compte c'est que ce soit là votre.
+
+Pour vous aider, voici un ensemble de cas à traiter si vous allez à gauche (les `0` représentent une case vide) :
+* `2, 0, 0, 2` => `4, 0, 0, 0`
+* `2, 4, 2, 4` => `2, 4, 2, 4`
+* `2, 2, 0, 4` => `4, 4, 0, 0`
+* `0, 0, 0, 4` => `4, 0, 0, 0`
+* `0, 0, 2, 4` => `2, 4, 0, 0`
+
+### Gérer toutes les directions
+
+Une fois que vous êtes arrivé à fusionner les nombres dans une direction, faites le pour toutes les directions.
+
+_Note : Votre algorithme peut être générique et ne pas nécéssiter de traitement spécifique pour une direction particulière._
+
+### Gérer le game over
+
+Une jeu dois avoir des règles. La règles la plus importante est de savoir quand on à gagner ou perdu.
+
+Gérer ce cas dans le jeu n'est pas forcément évident car il faut anticiper les futurs mouvements et s'assurer qu'il ne peut plus y en avoir même si la grille est pleine.
+
+Je vous laisse chercher comment faire. Encore une fois, même si c'est pas la meilleure solution, essayez :).
+
+### Gérer les scores
+
+L'affichage des scores ne devrait pas être trop un problème. Garder juste une variable que vous mettez à `0` au début de la partie et ajoutez à chaque fusion de nombre réussi le bon score.
+
 
 ## Les commandements de maître Yoda
 
@@ -385,3 +439,5 @@ const maVar = 10; // Si on ne veut pas réaffecter la variable
 let autreVar = 12; // Si on veut réaffecter la variable
 autreVar = 14;
 ```
+
+## Barème
