@@ -3,8 +3,56 @@
 1. [Introduction](#introduction)
 2. [Fonctionnement du jeu](#fonctionnement-du-jeu)
 3. Etapes de développement
-    3.1 Arriver à gérer l'affichage de la grille en Javascript
-    3.2 Placement aléatoire des nombres
+    1. Arriver à gérer l'affichage de la grille en Javascript
+    2. Placement aléatoire des nombres
+    3. Affichage
+    4. Bouton "Nouvelle partie"
+    5. Détecter les déplacements
+    6. Déplacer les nombres dans une direction
+    7. Fusionner les nombres
+    8. Gérer toutes les directions
+    9. Gérer le game over
+    10. Gérer les scores
+4. Les commandements de maître Yoda
+    1. Git tu utiliseras
+        1. Les commandes de base
+    2. Sur Gitlab ton projet tu rendras
+    3. Formater ton code tu dois
+    4. Eslint ton code valide sera
+    5. Bryan is in the kitchen
+    6. Small is beautifull
+    7. Jamais tu ne copieras
+    8. Du javascript récent tu utiliseras
+5. Barème
+    1. Forme
+        1. Rendu à temps
+        2. Rendu dans les bonnes modalités
+        3. Plusieurs commits avec messages explicites
+        4. Code écrit dans un anglais compréhensible
+        5. Fonctions pas trop grosses
+        6. Pas de duplication de code
+        7. Eslint OK
+        8. Code formaté
+        9. Module ES6
+    2. Fond
+        1. Position aléatoire des 2 premiers nombres
+        2. Déplacement des tuiles avec les touches au moins dans une direction
+        3. Fusion des nombres fonctionnelle au moins dans une direction
+        4. Apparition d'une nouvelle tuile après un déplacement
+        5. Gestion du game over
+        6. Message quand on a gagné
+        7. Déplacement fonctionnel dans toutes les directions
+        8. Fusion des nombres fonctionnelle dans toutes les directions
+        9. Jeu "joli" et original
+        10. Utilisation des bonnes classes CSS
+    3. Bonus
+        1. Sauvegarde des meilleurs scores
+        2. Sauvegarde de la partie en cours
+        3. Animation sur les déplacements
+        4. Animation pour les nouvelles tuiles
+        5. Gestion des événements touch
+
+
 
 
 ## Introduction
