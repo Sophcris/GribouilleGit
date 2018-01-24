@@ -251,6 +251,25 @@ Exemple :
 
 `git add *.js`
 
+##### `git rm` et `git mv`
+
+Souvent, on veut supprimer ou modifier un fichier de notre projet.
+
+On a l'habitude de le faire via une interface graphique, notre navigateur de fichier généralement.
+
+Le truc, c'est qu'il faut aussi dire à git que vous voulez le supprimer du _dépôt git_.
+
+On utilise alors la commande `git rm` pour supprimer un fichier :
+
+`git rm <nom_du_fichier>`
+
+_Note : si `git rm` est appelé avant d'avoir supprimer le fichier sur le disque, alors le fichier sera supprimé en même temps._
+
+Et la commande `git mv` pour le déplacer :
+
+`git mv <ancien_nom_de_fichier> <nouveau_nom_de_fichier>`
+
+_Note : si vous avez oublié d'appeler `git mv` pour renommer ou déplacer un fichier, pas de souci ! Vous pouvez faire un `git add` pour ajouter le fichier que git considère comme nouveau. Et restez zen, git va retrouver ses petits et garder l'historique sur le fichier._
 ##### `git commit`
 
 Une fois que vous avez ajouter tous les fichiers que vous voulez, vous pouvez créer un _commit_.
