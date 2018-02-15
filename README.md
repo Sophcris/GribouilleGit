@@ -566,6 +566,10 @@ Quand on débute, on a souvent tendance à copier/coller son code un peu partout
 
 L'idée est de faire des fonctions génériques qui permettent de réutiliser plusieurs fois une même logique de code.
 
+#### Pas d'utilisation de code externe
+
+Vous code doit être en intégralité écrit par vous. Il est interdit d'utiliser des librairies Javascript tel que jQuery ou des frameworks CSS tel que Twitter Bootstrap.
+
 #### Eslint OK
 
 Je dois pouvoir passer eslint avec le fichier `.eslintrc.json` sans aucune erreur, ni warning.
