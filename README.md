@@ -10,9 +10,10 @@
     5. [Détecter les déplacements](#détecter-les-deplacements)
     6. [Déplacer les nombres dans une direction](#déplacer-les-nombres-dans-une-direction)
     7. [Fusionner les nombres](#fusionner-les-nombres)
-    8. [Gérer toutes les directions](#gerer-toutes-les-directions)
-    9. [Gérer le game over](#gerer-le-game-over)
-    10. [Gérer les scores](#gerer-les-scores)
+    8. [Gérer toutes les directions](#gérer-toutes-les-directions)
+    9. [Gérer le game over](#gérer-le-game-over)
+    10. [Gérer les scores](#gérer-les-scores)
+    11. [Fonctions javascript utiles](#fonctions-javascript-utiles)
 4. [Les commandements de maître Yoda](#les-commandements-de-maître-Yoda)
     1. [Git tu utiliseras](#git-tu-utiliseras)
         1. [Les commandes de base](#les-commandes-de-base)
@@ -187,6 +188,14 @@ Je vous laisse chercher comment faire. Encore une fois, même si c'est pas la me
 ### Gérer les scores
 
 L'affichage des scores ne devrait pas être trop un problème. Garder juste une variable que vous mettez à `0` au début de la partie et ajoutez à chaque fusion de nombre réussi le bon score.
+
+### Fonctions javascript utiles
+
+Voici une liste (non exhaustive) des fonctions javascript qui pourront vous être utiles :
+* [Math.random](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random) pour générer un nombre aléatoire
+* [Math.floor](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) pour arrondir à l'entier inférieur
+* [document.getElementById](https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById) pour récupéré un noeud Html par son id
+* [element.innerHTML](https://developer.mozilla.org/fr/docs/Web/API/Element/innertHTML) pour récupérer ou modifier la valeur html d'un élément HTML
 
 
 ## Les commandements de maître Yoda
