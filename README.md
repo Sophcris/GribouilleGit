@@ -589,7 +589,21 @@ Votre code doit être formaté avec prettier ayant les réglages par défaut.
 
 #### Module ES6
 
-Tout votre code javascript doit se trouver dans des modules ES6. Il est interdit d'écrire du code js dans une balise `<script></script>` de votre html.
+Tout votre code javascript doit se trouver dans des modules ES6.
+
+C'est à dire que vous devez déclarer votre fichier javascript de cette manière dans votre html :
+
+```html
+<script src="2048.js" type="module"></script>
+```
+
+La notation suivante est donc interdite :
+```html
+<script src="2048.js"></script>
+```
+
+**Attention : Firefox ne prend pas encore en charge automatiquement les modules ES6.**
+**Il faut aller dans `about:config` et mettre la préférence `dom.moduleScripts.enabled` à `true`. Et oui on est à la pointe de la technologie!**
 
 ### Fond
 
