@@ -17,7 +17,7 @@
 4. [Les commandements de maître Yoda](#les-commandements-de-maître-Yoda)
     1. [Git tu utiliseras](#git-tu-utiliseras)
         1. [Les commandes de base](#les-commandes-de-base)
-    2. [Sur Gitlab ton projet tu rendras](#sur-Gitlab-ton-projet-tu-rendras)
+    2. [Sur Gitlab ton projet tu rendras](#sur-gitlab-ton-projet-tu-rendras)
     3. [Formater ton code tu dois](#formater-ton-code-tu-dois)
     4. [Eslint ton code valide sera](#eslint-ton-code-valide-sera)
     5. [Bryan is in the kitchen](#bryan-is-in-the-kitchen)
@@ -206,7 +206,7 @@ Afin de vous poussez à utiliser des méthodes de travail professionnelles, voic
 
 ### Git tu utiliseras
 
-[git](https://git-scm.com/) logiciel de gestion de version décentralisé. Grosso modo, c'est un outil qui permet aux développeurs de garder un historique des modifications faites dans le code et de pouvoir aisément travailler en équipe.
+[git](https://git-scm.com/) est un logiciel de gestion de version décentralisé. Grosso modo, c'est un outil qui permet aux développeurs de garder un historique des modifications faites dans le code et de pouvoir aisément travailler en équipe.
 
 Il existe plusieurs outils de ce genre mais git est aujourd'hui le plus connu et sans doute le plus utilisé.
 
@@ -220,190 +220,10 @@ Vous n'allez pas vous contenter de juste utiliser git pour rendre votre travail,
 
 Pour cela, des points spécifiques à git sont prévus dans le barême (voir plus bas).
 
-#### Les commandes de base
+#### Les commandes de bases
 
-Voici une petite liste des commandes `git` de base qui vous permettront de créer des commits et rendre votre travail.
+Je vous invite à lire [ce document, sorte de "kit de survie pour git"](https://framagit.org/Andreas/cheatsheet-lafabrique/blob/master/cheatsheet_git.md) qui vous donnera juste assez d'information pour ne pas être perdu quand vous commencez git. 
 
-##### `git clone`
-
-C'est souvent la commande qu'on utilise quand on commence un projet à partir d'un projet GitHub ou GitLab (voir après) existant.
-
-Elle créer un dossier avec le nom du projet (il est possible de préciser un nom de dossier différent) dans lequel se trouvera les sources du projet ainsi que son historique (contenu dans un dossier caché `.git`).
-
-Sa syntaxe : 
-
-`git clone <adresse_git_du_projet>`
-
-##### `git status`
-
-Permet de savoir dans quel état se trouve son dossier `git`.
-
-Si on veut savoir s'il y a des fichiers modifiés, supprimé, nouveaux, si on diffère du serveur etc.
-
-Cela permet aussi de savoir s'il y a des problèmes (merge ou autre).
-
-Syntaxte :
-
-`git status`
-
-##### `git add`
-
-Vous permet d'ajouter un ou plusieurs fichier au commit que vous êtes en train de créer.
-
-Syntaxe :
-
-`git add <nom_du_fichier>`
-
-Remarque, il est possible d'ajouter plusieurs fichiers à la fois en utilisants des expressions régulières.
-
-Exemple : 
-
-`git add *.js`
-
-##### `git rm` et `git mv`
-
-Souvent, on veut supprimer ou modifier un fichier de notre projet.
-
-On a l'habitude de le faire via une interface graphique, notre navigateur de fichier généralement.
-
-Le truc, c'est qu'il faut aussi dire à git que vous voulez le supprimer du _dépôt git_.
-
-On utilise alors la commande `git rm` pour supprimer un fichier :
-
-`git rm <nom_du_fichier>`
-
-_Note : si `git rm` est appelé avant d'avoir supprimer le fichier sur le disque, alors le fichier sera supprimé en même temps._
-
-Et la commande `git mv` pour le déplacer :
-
-`git mv <ancien_nom_de_fichier> <nouveau_nom_de_fichier>`
-
-_Note : si vous avez oublié d'appeler `git mv` pour renommer ou déplacer un fichier, pas de souci ! Vous pouvez faire un `git add` pour ajouter le fichier que git considère comme nouveau. Et restez zen, git va retrouver ses petits et garder l'historique sur le fichier._
-##### `git commit`
-
-Une fois que vous avez ajouter tous les fichiers que vous voulez, vous pouvez créer un _commit_.
-
-Il s'agit de mettre un message sur un ensemble de modifications.
-
-Plus le commit est petit et plus le message de commit est précis, mieux c'est !
-
-N'hésitez pas à faire plusieurs commits par jour !
-
-Dès que vous faites une petite modification dans votre code, faites un commit, il n'y en a jamais trop (enfin faut pas abuser non plus).
-
-Il est fortement conseillé d'écrire vos messages de commit en **anglais** !
-
-_Note : J'utilise l'option `-m` pour préciser le message de commit directement sur la ligne de commande. Si vous avez beaucoup de choses à dire, ne l'utilisez pas, un éditeur de texte s'affichera et vous pourrez mettre autant de texte que vous voudrez._
-
-Ex :
-
-`git commit -m "Add CSS classes on the grid"`
-
-Evitez les messages trop évasifs genre :
-
-`git commit -m "Update code"` ou `git commit -m "Fix bug"`
-
-Tâchez de préciser au moins le nom du fichier impacté ou s'il y en a plusieurs, la fonctionnalité.
-
-Encore une fois, tâcher de séparer au maximum les commits. Pensez fonctionnalités !
-
-###### Changer le dernier commit
-
-Il est assez simple de changer le dernier commit en utilisant l'option :
-
-`git commit --amend`
-
-Au lieu de créer un nouveau commit, `git` ajoutera les nouvelles modifications au commit précédent et vous permettra de modifier le message.
-
-Pratique quand on s'est trompé ! Par contre, attention quand on travail à plusieurs car le commit change de _hash_.
-
-##### `git checkout`
-
-C'est une commande qui peut être utilisée dans plusieurs cas (changement de branche notamment) mais là on va l'utilser pour annuler des modifications sur un fichier.
-
-Si vous avez modifié un fichier, **sans l'avoir ajouté au commit**, mais que finalement vous voulez **revenir à sa version initiale** (celle du dernier commit) vous pouvez faire :
-
-`git checkout <nom_du_fichier>`
-
-Si vous voulez annulé l'ajout d'un fichier au commit courant, il faudra utiliser la commande `git reset` décrire juste après.
-
-##### `git reset`
-
-Parfois, on veut tout annuler, revenir à la version initiale d'un projet, `git reset` est fait pour ça.
-
-**Attention la commande qui suite réinitialise tout le projet par rapport à une version précise. Toutes les modifications faites ultérieurement seront perdues**
-
-`git reset --hard <nom_de_la_branche_ou_du_commit_ou_du_depot_distant>`
-
-Quand on a modifié un fichier et qu'on l'a déjà ajouter au commit courant, si on veut annuler l'ajout au commit (le "désindexé"), il faut faire un :
-
-`git reset HEAD <nom_du_fichier>`
-
-Il ne vous restera plus qu'à faire un `git checkout <nom_du_fichier>` pour annuler vos modification.
-
-
-##### `git log`
-
-Cette commande vous montre l'ensemble des commits d'une branche avec leur hash et les messages.
-
-Très pratique quand on veut voir l'historique d'un projet.
-
-`git log`
-
-##### `git show`
-
-Permet de voir le détail d'un commit qu'on a vu dans les logs.
-
-`git show <hash_du_commit>`
-
-##### `git pull`
-
-Cette commande vous permet de récupérer les dernières modifications effectuées sur le dépôt distant.
-
-Si vous avez fait des modifications sur votre dépôt local, il faudra alors _merger_ les deux dépôts et cela donne souvent la création d'un _commit de merge_.
-
-Syntaxe :
-
-`git pull <nom_du_depot_distant> <nom_de_la_branche>`
-
-Ex : 
-
-`git pull origin master`
-
-Parfois, `git` ne peut pas merger automatiquement les sources, c'est souvent le cas quand vous avez modifier un fichier qui a aussi été modifié dans le dépôt distant.
-
-Dans ce cas là, il faut faire le merge manuellement et c'est une autre pair de manche !
-
-Je vous conseille pour cela d'utiliser des outils comme `meld`
-
-`sudo apt install meld`
-
-Ensuite configurer git pour qu'il utilise `meld` :
-
-`git config --global merge.tool meld`
-
-Puis, vous pouvez faire un `git merge` après.
-
-Je vous conseille de vous faire aider par quelqu'un d'expérimenté les premières fois.
-
-##### `git push`
-
-Une fois que vous aurez fait vos commits, récupéré les dernières sources du serveur, gérer les éventuels conflits, vous pourrez publiez vos modification sur le dépôt distant !
-
-Syntaxe :
-
-`git push <nom_du_depot_distant> <nom_de_la_branche>`
-
-Ex : 
-
-`git push origin master`
-
-
-##### Et d'autres encore
-
-Il existe beaucoup d'autres fonctions `git`, on a peu parlé des dépôts distants et des branches, mais ça sera pour plus tard !
-
-Avec ces quelques commandes, vous devrez déjà être plus ou moins autonome :).
 
 ### Sur Gitlab ton projet tu rendras
 
