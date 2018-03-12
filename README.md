@@ -220,7 +220,7 @@ Vous n'allez pas vous contenter de juste utiliser git pour rendre votre travail,
 
 Pour cela, des points spécifiques à git sont prévus dans le barême (voir plus bas).
 
-#### Les commandes de bases
+#### Les commandes de base
 
 Je vous invite à lire [ce document, sorte de "kit de survie pour git"](https://framagit.org/Andreas/cheatsheet-lafabrique/blob/master/cheatsheet_git.md) qui vous donnera juste assez d'information pour ne pas être perdu quand vous commencez git. 
 
